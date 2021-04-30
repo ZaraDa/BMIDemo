@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A9B02720-64AC-4B0D-A62F-0DC897FE666E"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "2C77496E-0C23-4E12-8C70-CF1DB9CBB605"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "CAD4BE0D-BF01-442A-9BCA-A513F55771DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "E2087F58-16EE-4FC9-8678-030B206323B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "65535">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E84A622C-FE7E-4EA2-A438-3E95EC2A12E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BMI_DEMO_ZARA/ViewControllers/BMIDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E84A622C-FE7E-4EA2-A438-3E95EC2A12E1 - a7573c32f753b00b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMI_DEMO_ZARA.BMIDetailsViewController.scrollViewDidEndDragging(_: __C.UIScrollView, willDecelerate: Swift.Bool) -&gt; ()"
+                  moduleName = "BMI_DEMO_ZARA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zara/Documents/BMI_DEMO_ZARA/BMI_DEMO_ZARA/ViewControllers/BMIDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "E84A622C-FE7E-4EA2-A438-3E95EC2A12E1 - a7573c32f753b00b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMI_DEMO_ZARA.BMIDetailsViewController.scrollViewDidEndDragging(_: __C.UIScrollView, willDecelerate: Swift.Bool) -&gt; ()"
+                  moduleName = "BMI_DEMO_ZARA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zara/Documents/BMI_DEMO_ZARA/BMI_DEMO_ZARA/ViewControllers/BMIDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "E84A622C-FE7E-4EA2-A438-3E95EC2A12E1 - a7573c32f753b00b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMI_DEMO_ZARA.BMIDetailsViewController.scrollViewDidEndDragging(_: __C.UIScrollView, willDecelerate: Swift.Bool) -&gt; ()"
+                  moduleName = "BMI_DEMO_ZARA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zara/Documents/BMI_DEMO_ZARA/BMI_DEMO_ZARA/ViewControllers/BMIDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "1340">
+               </Location>
+               <Location
+                  uuid = "E84A622C-FE7E-4EA2-A438-3E95EC2A12E1 - a7573c32f753b00b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BMI_DEMO_ZARA.BMIDetailsViewController.scrollViewDidEndDragging(_: __C.UIScrollView, willDecelerate: Swift.Bool) -&gt; ()"
+                  moduleName = "BMI_DEMO_ZARA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zara/Documents/BMI_DEMO_ZARA/BMI_DEMO_ZARA/ViewControllers/BMIDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "2452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
