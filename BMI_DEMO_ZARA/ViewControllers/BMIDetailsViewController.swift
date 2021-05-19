@@ -16,7 +16,7 @@ class BMIDetailsViewController: UIViewController, NavigationBarCustomized {
         case height
         case gender
     }
-
+    
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     @IBOutlet weak var nameCover: UIView!
     @IBOutlet weak var nameTxtField: UITextField!
@@ -82,14 +82,14 @@ class BMIDetailsViewController: UIViewController, NavigationBarCustomized {
     @objc func tapOnTheScreen() {
         nameTxtField.resignFirstResponder()
     }
-
-
+    
+    
     
     @IBAction func calculateAction(_ sender: Any) {
         if interstitial.isReady {
-          interstitial.present(fromRootViewController: self)
+            interstitial.present(fromRootViewController: self)
         } else {
-          print("Ad wasn't ready")
+            print("Ad wasn't ready")
         }
     }
     
@@ -156,11 +156,11 @@ extension BMIDetailsViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             if cell.tag == selectedGenderTag {
-                 cell.value.textColor = highlightBlue
-                 cell.underline.isHidden = false
-                 tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                cell.value.textColor = highlightBlue
+                cell.underline.isHidden = false
+                tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
                 let fontSize = cell.value.font.pointSize
-                 cell.value.font = UIFont(name: "SegoeUI-Bold", size: fontSize)
+                cell.value.font = UIFont(name: "SegoeUI-Bold", size: fontSize)
             }
             else {
                 cell.value.textColor = defaultTextGray
@@ -180,7 +180,7 @@ extension BMIDetailsViewController: UITableViewDelegate, UITableViewDataSource {
         return tableView.frame.size.height/3
     }
     
-
+    
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         switch scrollView.tag {
@@ -192,12 +192,12 @@ extension BMIDetailsViewController: UITableViewDelegate, UITableViewDataSource {
             }
             break
         case PickerTag.height.rawValue:
-           if heightsTB.visibleCells.count >= 2 {
-             let cell:PickerCell = heightsTB.visibleCells[1] as! PickerCell
-             selectedHeightTag = cell.tag
-             heightsTB.reloadData()
-           }
-          break
+            if heightsTB.visibleCells.count >= 2 {
+                let cell:PickerCell = heightsTB.visibleCells[1] as! PickerCell
+                selectedHeightTag = cell.tag
+                heightsTB.reloadData()
+            }
+            break
         case PickerTag.gender.rawValue:
             let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
             if translation.y > 0 {
