@@ -13,10 +13,10 @@ extension CALayer {
     public func addGradient(withRadius cornerRadius:CGFloat, startPoint:CGPoint = CGPoint(x: 0, y: 0), endPoint:CGPoint = CGPoint(x: 1, y: 1)) {
     let gradient = CAGradientLayer()
     gradient.frame = bounds
-    gradient.colors = [UIColor(displayP3Red: 25.0/255.0, green: 119.0/255.0, blue: 159.0/255.0, alpha: 1.0).cgColor, UIColor(displayP3Red: 50.0/255.0, green: 205.0/255.0, blue: 165.0/255.0, alpha: 1.0).cgColor]
+    gradient.colors = [navBarGradient1Color.cgColor, navBarGradient2Color.cgColor]
     gradient.startPoint = startPoint
     gradient.endPoint = endPoint
-        gradient.cornerRadius = cornerRadius
+    gradient.cornerRadius = cornerRadius
     self.insertSublayer(gradient, at: 0)
     }
     

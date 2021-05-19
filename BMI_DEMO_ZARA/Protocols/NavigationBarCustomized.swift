@@ -1,31 +1,30 @@
 //
-//  BaseViewController.swift
+//  NavigationBarCustomized.swift
 //  BMI_DEMO_ZARA
 //
-//  Created by Zara Davtyan on 2/26/20.
-//  Copyright © 2020 Zara Davtyan. All rights reserved.
+//  Created by Zara Davtyan on 19.05.21.
+//  Copyright © 2021 Zara Davtyan. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class BaseViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupNavigationBarStyle()
-    }
+protocol NavigationBarCustomized {
+    func setupNavigationBarStyle()
+}
+
+extension NavigationBarCustomized where Self: UIViewController {
     
     func setupNavigationBarStyle() {
-
-
-    self.navigationController?.navigationBar.tintColor = UIColor.white
-
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
         //// adding title color
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Segoe UI", size: 17)!]
-               } else {
-                   UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont(name: "Segoe UI", size: 17)!]
-               }
+        } else {
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont(name: "Segoe UI", size: 17)!]
+        }
         
         ////adding gradient
         if let navigationBar = self.navigationController?.navigationBar {
@@ -33,13 +32,13 @@ class BaseViewController: UIViewController {
             var bounds = navigationBar.bounds
             bounds.size.height += UIApplication.shared.statusBarFrame.size.height
             gradient.frame = bounds
-            gradient.colors = [UIColor(displayP3Red: 25.0/255.0, green: 119.0/255.0, blue: 159.0/255.0, alpha: 1.0).cgColor, UIColor(displayP3Red: 50.0/255.0, green: 205.0/255.0, blue: 165.0/255.0, alpha: 1.0).cgColor]
+            gradient.colors = [navBarGradient1Color.cgColor, navBarGradient2Color.cgColor]
             gradient.startPoint = CGPoint(x: 0, y: 0)
             gradient.endPoint = CGPoint(x: 1, y: 0)
-           
-           if let image = getImageFrom(gradientLayer: gradient) {
-               navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
-           }
+            
+            if let image = getImageFrom(gradientLayer: gradient) {
+                navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
+            }
         }
         
         
@@ -52,7 +51,7 @@ class BaseViewController: UIViewController {
         
     }
     
-    func getImageFrom(gradientLayer:CAGradientLayer) -> UIImage? {
+    private  func getImageFrom(gradientLayer:CAGradientLayer) -> UIImage? {
         var gradientImage:UIImage?
         UIGraphicsBeginImageContext(gradientLayer.frame.size)
         if let context = UIGraphicsGetCurrentContext() {
@@ -62,5 +61,5 @@ class BaseViewController: UIViewController {
         UIGraphicsEndImageContext()
         return gradientImage
     }
-
 }
+ 

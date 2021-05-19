@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5D03AD752406DE5D00A69C4F /* Layer+UIFeatured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03AD742406DE5D00A69C4F /* Layer+UIFeatured.swift */; };
-		5D03AD772406E2B000A69C4F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03AD762406E2B000A69C4F /* BaseViewController.swift */; };
 		5D03AD7A2407D8D600A69C4F /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03AD782407D8D600A69C4F /* PickerCell.swift */; };
 		5D03AD7B2407D8D600A69C4F /* PickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D03AD792407D8D600A69C4F /* PickerCell.xib */; };
 		5D03AD862407EB3400A69C4F /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03AD852407EB3400A69C4F /* AppColors.swift */; };
 		5D03AD8924081D5E00A69C4F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03AD8824081D5E00A69C4F /* Strings.swift */; };
+		5D1A45932655956200D87DEB /* NavigationBarCustomized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A45922655956200D87DEB /* NavigationBarCustomized.swift */; };
+		5D1A459626559A6C00D87DEB /* BannerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A459526559A6C00D87DEB /* BannerId.swift */; };
 		5D5B94EA240A91AB007A6A13 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B94E8240A91AA007A6A13 /* Segoe UI Bold.ttf */; };
 		5D5B94EB240A91AB007A6A13 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B94E9240A91AA007A6A13 /* Segoe UI.ttf */; };
 		5DAB8DE3240AD00700D33CA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAB8DE2240AD00700D33CA4 /* GoogleService-Info.plist */; };
@@ -29,11 +30,12 @@
 		2A0F43F029FB61DA39F54F79 /* Pods-BMI_DEMO_ZARA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI_DEMO_ZARA.release.xcconfig"; path = "Target Support Files/Pods-BMI_DEMO_ZARA/Pods-BMI_DEMO_ZARA.release.xcconfig"; sourceTree = "<group>"; };
 		55C7343539C02CB7FD7AC23D /* libPods-BMI_DEMO_ZARA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BMI_DEMO_ZARA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D03AD742406DE5D00A69C4F /* Layer+UIFeatured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Layer+UIFeatured.swift"; sourceTree = "<group>"; };
-		5D03AD762406E2B000A69C4F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5D03AD782407D8D600A69C4F /* PickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCell.swift; sourceTree = "<group>"; };
 		5D03AD792407D8D600A69C4F /* PickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerCell.xib; sourceTree = "<group>"; };
 		5D03AD852407EB3400A69C4F /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		5D03AD8824081D5E00A69C4F /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		5D1A45922655956200D87DEB /* NavigationBarCustomized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomized.swift; sourceTree = "<group>"; };
+		5D1A459526559A6C00D87DEB /* BannerId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerId.swift; sourceTree = "<group>"; };
 		5D5B94E8240A91AA007A6A13 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		5D5B94E9240A91AA007A6A13 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		5DAB8DE2240AD00700D33CA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -63,7 +65,6 @@
 		5D03AD702406DB2000A69C4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D03AD762406E2B000A69C4F /* BaseViewController.swift */,
 				5DC3E19C2406A02200C1116D /* BMIDetailsViewController.swift */,
 				5DD8554824091EF200684CFD /* BMIResultViewController.swift */,
 			);
@@ -100,9 +101,26 @@
 		5D03AD842407EAE600A69C4F /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
+				5D03AD7F2407D9EF00A69C4F /* Fonts */,
 				5D03AD852407EB3400A69C4F /* AppColors.swift */,
 			);
 			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		5D1A45912655950800D87DEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A45922655956200D87DEB /* NavigationBarCustomized.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5D1A459426559A4C00D87DEB /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A459526559A6C00D87DEB /* BannerId.swift */,
+			);
+			path = Banners;
 			sourceTree = "<group>";
 		};
 		5DC3E18C2406A02200C1116D = {
@@ -128,8 +146,9 @@
 			children = (
 				5DAB8DE2240AD00700D33CA4 /* GoogleService-Info.plist */,
 				5DC3E1982406A02200C1116D /* AppDelegate.swift */,
+				5D1A459426559A4C00D87DEB /* Banners */,
+				5D1A45912655950800D87DEB /* Protocols */,
 				5D03AD842407EAE600A69C4F /* AppStyle */,
-				5D03AD7F2407D9EF00A69C4F /* Fonts */,
 				5D03AD732406DE2300A69C4F /* Categories */,
 				5D03AD702406DB2000A69C4F /* ViewControllers */,
 				5DC3E19E2406A02200C1116D /* Main.storyboard */,
@@ -290,12 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DC3E19D2406A02200C1116D /* BMIDetailsViewController.swift in Sources */,
-				5D03AD772406E2B000A69C4F /* BaseViewController.swift in Sources */,
 				5D03AD752406DE5D00A69C4F /* Layer+UIFeatured.swift in Sources */,
+				5D1A459626559A6C00D87DEB /* BannerId.swift in Sources */,
 				5D03AD862407EB3400A69C4F /* AppColors.swift in Sources */,
 				5DC3E1992406A02200C1116D /* AppDelegate.swift in Sources */,
 				5D03AD7A2407D8D600A69C4F /* PickerCell.swift in Sources */,
 				5DD8554924091EF200684CFD /* BMIResultViewController.swift in Sources */,
+				5D1A45932655956200D87DEB /* NavigationBarCustomized.swift in Sources */,
 				5D03AD8924081D5E00A69C4F /* Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,9 @@
 import UIKit
 import GoogleMobileAds
 
-class BMIDetailsViewController: BaseViewController {
+class BMIDetailsViewController: UIViewController, NavigationBarCustomized {
     
-    enum PickerTag:Int {
+    enum PickerTag: Int {
         case weight = 0
         case height
         case gender
@@ -29,9 +29,9 @@ class BMIDetailsViewController: BaseViewController {
     
     
     /////// view model
-    var selectedWeightTag:Int = 1
-    var selectedHeightTag:Int = 1
-    var selectedGenderTag:Int = 1
+    var selectedWeightTag: Int = 1
+    var selectedHeightTag: Int = 1
+    var selectedGenderTag: Int = 1
     //////// view model
     
     var interstitial: GADInterstitial!
@@ -39,6 +39,22 @@ class BMIDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupUI()
+        self.loadAd()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pickerCover.layer.addShadow()
+        calculateButton.layer.addGradient(withRadius: 3.0)
+        calculateButton.layer.addShadow()
+    }
+    
+    func setupUI() {
+        nameCover.layer.cornerRadius = 4.0
+        nameCover.layer.borderColor = defaultTextGray.cgColor
+        nameCover.layer.borderWidth = 1.0
+        nameTxtField.returnKeyType = .done
         
         /// setupTableviews
         weightsTB.register(UINib(nibName: "PickerCell", bundle: nil), forCellReuseIdentifier: "PickerCellId")
@@ -47,42 +63,27 @@ class BMIDetailsViewController: BaseViewController {
         ////
         
         self.navigationItem.title = "ADD BMI DETAILS"
-        
+        calculateButton.setTitle("Calculate", for: .normal)
         tapGesture.addTarget(self, action:#selector(tapOnTheScreen))
         self.view.addGestureRecognizer(tapGesture)
         
-        
-        self.setupUI()
-        
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        
-        bannerView.load(GADRequest())
-        
-        
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-        let request = GADRequest()
-        interstitial.load(request)
     }
     
-    func setupUI() {
-        nameCover.layer.cornerRadius = 4.0
-        nameCover.layer.borderColor = defaultTextGray.cgColor
-        nameCover.layer.borderWidth = 1.0
-        nameTxtField.returnKeyType = .done
+    func loadAd() {
+        bannerView.adUnitID = BannerId.detailScreenBannerId
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+        interstitial = GADInterstitial(adUnitID: BannerId.detailsScreenIntstrId)
+        let request = GADRequest()
+        interstitial.load(request)
     }
     
     @objc func tapOnTheScreen() {
         nameTxtField.resignFirstResponder()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        pickerCover.layer.addShadow()
-        calculateButton.layer.addGradient(withRadius: 3.0)
-        calculateButton.setTitle("Calculate", for: .normal)
-        calculateButton.layer.addShadow()
-    }
+
     
     @IBAction func calculateAction(_ sender: Any) {
         if interstitial.isReady {

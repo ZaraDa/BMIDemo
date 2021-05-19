@@ -10,9 +10,8 @@ import UIKit
 import GoogleMobileAds
 import StoreKit
 
-class BMIResultViewController: BaseViewController {
-    
-    
+class BMIResultViewController: UIViewController {
+
     @IBOutlet weak var infoValue: UILabel!
     @IBOutlet weak var indexValue: UILabel!
     @IBOutlet weak var coverView: UIView!
@@ -25,19 +24,9 @@ class BMIResultViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "BMI DETAILS"
-        
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        
         setupUI()
-        
-       
+        loadAd()
     }
-    
-    
-    
-    
     
     func setupUI() {
         
@@ -48,6 +37,12 @@ class BMIResultViewController: BaseViewController {
         viewRate.layer.cornerRadius = 8.0
         viewRate.layer.borderColor = UIColor.white.cgColor
         viewRate.layer.borderWidth = 1.0
+    }
+    
+    func loadAd() {
+        bannerView.adUnitID = BannerId.resultsScreenBannerId
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     
