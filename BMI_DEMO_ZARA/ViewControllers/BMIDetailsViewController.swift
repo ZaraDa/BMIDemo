@@ -48,6 +48,7 @@ class BMIDetailsViewController: UIViewController, NavigationBarCustomized {
         pickerCover.layer.addShadow()
         calculateButton.layer.addGradient(withRadius: 3.0)
         calculateButton.layer.addShadow()
+        setupNavigationBarStyle()
     }
     
     func setupUI() {
